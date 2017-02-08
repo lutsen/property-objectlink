@@ -1,0 +1,23 @@
+{
+	"name": "lagan/property-objectlink",
+	"type": "library",
+	"description": "Controller for the Lagan objectlink property. Links to any object in the database and returns the object.",
+	"keywords": ["lagan","object","link","property","controller"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Lútsen Stellingwerff",
+			"email": "lutsenstellingwerff@gmail.com",
+			"homepage": "http://www.hoverkraft.nl",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.5.0"
+	},
+    "autoload": {
+        "psr-4": {
+            "Lagan\\Property\\": "src/"
+        }
+    }
+}
