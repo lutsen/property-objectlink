@@ -39,7 +39,7 @@ class Objectlink {
 		} elseif ( $new_value['id'] ) {
 
 			// Check if object exists
-			$object = \R::findOne( $new_value['type'], ' id = :id ', [ ':id' => $new_value['id'] ] );
+			$object = \R::findOne( strtolower( $new_value['type'] ), ' id = :id ', [ ':id' => $new_value['id'] ] );
 			if ( !$object ) {
 				throw new \Exception('This '.$new_value['type'].' does not exist.');
 			}
@@ -95,7 +95,7 @@ class Objectlink {
 		// "group" to only link to the entire group of objects, and "all" to link to both.
 		foreach ( $property['models'] as $type => $link ) {
 			if ( $link !== 'group' ) {
-				$return[$type] = \R::findAll( $type );
+				$return[$type] = \R::findAll( strtolower( $type ) );
 			}
 		}
 
